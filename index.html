@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="./src/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="jobs-fields">
+				<div class="field">
+					<span class="label">Client: </span>
+					<input type="text" id="client" />
+				</div>
+				<div class="field">
+					<span class="label">Cost: </span>
+					<input type="number" name="" id="cost" />
+				</div>
+				<div class="field">
+					<span class="label">Start: </span>
+					<input type="date" name="" id="start" />
+				</div>
+				<div class="field">
+					<span class="label">End: </span>
+					<input type="date" name="" id="end" />
+				</div>
+				<div class="field">
+					<span class="label">Return: </span>
+					<input type="number" name="" id="return" />
+				</div>
+			</div>
+			<button>Add record</button>
+			<div id="data">
+				<table border="1">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Client</th>
+							<th>Start</th>
+							<th>End</th>
+							<th>Return</th>
+							<th>Cost</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>
