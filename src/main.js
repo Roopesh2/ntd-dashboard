@@ -1,6 +1,6 @@
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { Timestamp, addDoc } from "firebase/firestore";
-import { fetchDocs } from "./dataFetch";
+import { collRef, fetchDocs, getLastEntry } from "./dataFetch";
 import { addRow, val } from "./utils";
 import { app, auth, provider } from "./firebaseInits";
 
