@@ -1,11 +1,5 @@
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { Timestamp, addDoc } from "firebase/firestore";
-import { collRef, fetchDocs, getLastEntry } from "./dataFetch";
-import { addRow, val } from "./utils";
 import { app, auth, provider } from "./firebaseInits";
-
-var btn = document.querySelector("button"),
-	table = document.querySelector("#jobs-data > tbody");
 
 if (!app)
 	signInWithPopup(auth, provider)
@@ -29,27 +23,3 @@ if (!app)
 			console.error(errorCode, ":", errorMessage);
 			console.error("Mail used:", email);
 		});
-
-window.addEventListener("load", async () => {
-	// fetch data on load
-	let documents = await fetchDocs(50);
-	for (let doc of documents) {
-		table.innerHTML += addRow(doc.data());
-	}
-});
-
-btn.addEventListener("click", async () => {
-	getLastEntry().then(async (id) => {
-		let data = {
-			id: ++id,
-			client: val("#client"),
-			cost: parseFloat(val("#cost")),
-			start: Timestamp.fromDate(new Date(val("#start"))),
-			end: Timestamp.fromDate(new Date(val("#end"))),
-			returns: parseFloat(val("#return")),
-		};
-		const docRef = await addDoc(collRef, data);
-		console.log("added", docRef.id);
-		table.innerHTML = addRow(data) + table.innerHTML;
-	});
-});

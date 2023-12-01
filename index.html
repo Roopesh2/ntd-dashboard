@@ -16,12 +16,12 @@
 		</header>
 		<div class="app">
 			<div class="jobs-section section">
-				<div class="dialouge-system" id="jobs-dialouge">
+				<div class="dialouge-system hidden" id="jobs-dialouge">
 					<div class="drop-shadow"></div>
 					<div class="dialouge-box">
 						<div class="actions">
 							<h3>Add record</h3>
-							<button class="btn-action close-btn" id="dialouge-close">
+							<button class="btn-action-small close-btn" id="dialouge-close">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									height="24"
@@ -55,9 +55,17 @@
 							</tr>
 						</table>
 						<div class="add-records-container">
-							<button class="btn-large" id="add-records-btn">Add record</button>
+							<button class="btn-large action-btn" id="add-records-btn">
+								Add record
+							</button>
 						</div>
 					</div>
+				</div>
+				<div class="actions-panel">
+					<button class="btn-large filled" id="add-job">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+						<span>New Job</span>
+					</button>
 				</div>
 				<div class="data-entry">
 					<table border="1" id="jobs-data">

@@ -23,10 +23,12 @@
 	left: 0;
 }
 
-.dialouge-box > .add-records-container {
-	margin-top: 15px;
-	position: relative;
-	text-align: center;
+.add-records-container {
+	margin-top: 10px;
+}
+
+.dialouge-box  .action-btn {
+	margin: auto;
 }
 
 .actions {

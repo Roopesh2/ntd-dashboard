@@ -11,6 +11,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	--primary: #3498db;
+	--primary-in: #5fa1cc;
 }
 
 body,
@@ -37,7 +38,6 @@ header h1 {
 }
 
 .section {
-	display: flex;
 	justify-content: center;
 }
 
@@ -46,4 +46,8 @@ header h1 {
 }
 .expenses-section {
 	display: none;
+}
+
+.actions-panel {
+	margin: 1rem;
 }
