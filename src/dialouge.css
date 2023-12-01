@@ -1,0 +1,41 @@
+.dialouge-box {
+	z-index: 3;
+	position: absolute;
+	padding: 0 20px 20px 20px;
+	width: fit-content;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	background-color: white;
+	border-radius: 20px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);
+}
+
+.drop-shadow {
+	position: fixed;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	background-color: #444;
+	filter: opacity(0.4);
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
+.dialouge-box > .add-records-container {
+	margin-top: 15px;
+	position: relative;
+	text-align: center;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0 20px 5px;
+	align-items: center;
+}
+.actions * {
+	margin: 0;
+	padding: 0;
+}

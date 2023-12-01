@@ -1,0 +1,47 @@
+.btn-large {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 7px;
+	font-size: 15px;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #fafafa;
+	cursor: pointer;
+	transition: background-color 0.25s;
+	border: 2px solid var(--primary);
+}
+
+.btn-large:hover {
+	background-color: var(--primary);
+}
+
+.btn-large:focus,
+.btn-large:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 5px;
+}
+
+.btn-action {
+	background-color: transparent;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 0;
+	transition: background-color 0.2s;
+}
+.btn-action:hover {
+	background-color: #eee;
+}

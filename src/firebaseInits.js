@@ -1,6 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import {
+	getFirestore,
+	initializeFirestore,
+	persistentLocalCache,
+} from "firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAnXURp29t0wptiVig6QFDLXj3wEDXqcZs",
@@ -14,6 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
+initializeFirestore(app, { localCache: persistentLocalCache() });
 
 export const db = getFirestore(app);
 export const provider = new GoogleAuthProvider();

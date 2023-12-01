@@ -6,48 +6,102 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Dashboard</title>
 		<link rel="stylesheet" href="src/style.css" />
+		<link rel="stylesheet" href="src/components.css" />
+		<link rel="stylesheet" href="src/dialouge.css" />
+		<script src="src/jq.js"></script>
 	</head>
 	<body>
-		<div id="app">
-			<div class="jobs-fields">
-				<div class="field">
-					<span class="label">Client: </span>
-					<input type="text" id="client" />
+		<header>
+			<h1>Dashboard</h1>
+		</header>
+		<div class="app">
+			<div class="jobs-section section">
+				<div class="dialouge-system" id="jobs-dialouge">
+					<div class="drop-shadow"></div>
+					<div class="dialouge-box">
+						<div class="actions">
+							<h3>Add record</h3>
+							<button class="btn-action close-btn" id="dialouge-close">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="24"
+									viewBox="0 -960 960 960"
+									width="24">
+									<path
+										d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+								</svg>
+							</button>
+						</div>
+						<table class="jobs-fields">
+							<tr class="field">
+								<td class="label">Client:</td>
+								<td><input type="text" id="client" /></td>
+							</tr>
+							<tr class="field">
+								<td class="label">Cost:</td>
+								<td><input type="number" name="" id="cost" /></td>
+							</tr>
+							<tr class="field">
+								<td class="label">Start:</td>
+								<td><input type="date" name="" id="start" /></td>
+							</tr>
+							<tr class="field">
+								<td class="label">End:</td>
+								<td><input type="date" name="" id="end" /></td>
+							</tr>
+							<tr class="field">
+								<td class="label">Return:</td>
+								<td><input type="number" name="" id="return" /></td>
+							</tr>
+						</table>
+						<div class="add-records-container">
+							<button class="btn-large" id="add-records-btn">Add record</button>
+						</div>
+					</div>
 				</div>
-				<div class="field">
-					<span class="label">Cost: </span>
-					<input type="number" name="" id="cost" />
-				</div>
-				<div class="field">
-					<span class="label">Start: </span>
-					<input type="date" name="" id="start" />
-				</div>
-				<div class="field">
-					<span class="label">End: </span>
-					<input type="date" name="" id="end" />
-				</div>
-				<div class="field">
-					<span class="label">Return: </span>
-					<input type="number" name="" id="return" />
+				<div class="data-entry">
+					<table border="1" id="jobs-data">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Client</th>
+								<th>Start</th>
+								<th>End</th>
+								<th>Return</th>
+								<th>Cost</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
 				</div>
 			</div>
-			<button>Add record</button>
-			<div id="data">
-				<table border="1">
-					<thead>
-						<tr>
-							<th>#</th>
-							<th>Client</th>
-							<th>Start</th>
-							<th>End</th>
-							<th>Return</th>
-							<th>Cost</th>
-						</tr>
-					</thead>
-					<tbody></tbody>
-				</table>
+			<div class="expenses-section section">
+				<div class="expenses-fields">
+					<div class="field">
+						<span class="label">Item: </span>
+						<input type="text" id="item" />
+					</div>
+					<div class="field">
+						<span class="label">Amt: </span>
+						<input type="number" name="" id="amt" />
+					</div>
+				</div>
+				<button>Add Expense</button>
+				<div class="data-entry">
+					<table border="1" id="expenses">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Item</th>
+								<th>Cost</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 		<script type="module" src="./src/main.js"></script>
+		<script type="module" src="./src/events.js"></script>
 	</body>
 </html>
